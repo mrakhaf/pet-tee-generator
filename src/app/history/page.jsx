@@ -26,7 +26,7 @@ const ImageHistoryList = () => {
 
   return (
    <div className="max-w-md mx-auto p-4">
-    <h1 className="text-3xl font-bold mb-4">Image History</h1>
+    <h1 className="text-3xl font-bold mb-4 text-center">Image History</h1>
     {loading ? (
       <p className="text-gray-600">Loading...</p>
     ) : (
@@ -56,9 +56,12 @@ const ImageHistoryList = () => {
       </ul>
     )}
 
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
-      <a href="/">Back to Home</a>
-    </button>
+    <div className="flex justify-center">
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+        <a href="/">Back to Home</a>
+      </button>
+    </div>
+    
   </div>
   );
 };

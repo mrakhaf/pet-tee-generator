@@ -2,7 +2,6 @@ import { prisma } from '../../lib/db';
 
 export async function GET() {
     try {
-        //find many with order by desc
         const history = await prisma.history.findMany({
             orderBy: {
                 createdAt: 'desc'

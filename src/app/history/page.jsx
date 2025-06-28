@@ -6,8 +6,6 @@ const ImageHistoryList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // fetch image history from API or database
-
     const fetchImageHistory = async () => {
       try {
         const response = await fetch('/api/history');
@@ -58,7 +56,6 @@ const ImageHistoryList = () => {
       </ul>
     )}
 
-    {/* button back to home */}
     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
       <a href="/">Back to Home</a>
     </button>

@@ -33,7 +33,6 @@ export async function POST(req) {
   
   const imageUrlString = String(imageUrl);
 
-  //prisma with handle error
   try {
     await prisma.history.create({
       data: {

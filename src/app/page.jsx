@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react';
+import RoundedLoading from './components/loading/rounded-loading';
 
 export default function Home() {
   const [animal, setAnimal] = useState('');
@@ -26,6 +27,7 @@ export default function Home() {
 
     try {
       setImageUrl(null);
+      setError(null);
       setLoading(true);
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -88,7 +90,11 @@ export default function Home() {
         View History
       </button>
 
-      {loading && <p>Loading...</p>}
+      {loading && 
+      <div className="flex justify-center items-center">
+        <RoundedLoading />
+      </div>
+      }
       {error && <p className="text-red-500">{error}</p>}
 
       {imageUrl && (

@@ -10,7 +10,7 @@ export const generateImage = async (animal, text) => {
         "stability-ai/sdxl:7762fd07cf82c948538e41f63f77d685e02b063e37e496e96eefd46c929f9bdc",
         {
             input: {
-                prompt: `a pass photo of a ${animal} wearing a t-shirt with printed slogan text -> "${text}" and slogan can be read clearly `,
+                prompt: `"A ${animal}, formal pose for pass photo, wearing a t-shirt with printed text '${text}', the text can be read clearly"`,
             },
         }
     );
